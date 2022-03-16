@@ -1,6 +1,10 @@
-
+import { Link } from 'react-router-dom';
 function Schedule() {
-    return <div>Schedule</div>
+    return ( 
+        <div>
+            <Link to='/Task'>Tasks</Link>
+        </div>
+    )
     
 }
 

@@ -1,7 +1,9 @@
-
+import { Link } from 'react-router-dom';
 function OrganisationMembers() {
     return(
-        <div>Organisation Members</div>
+        <div>
+            <h1>Members</h1>
+        </div>
     )
 }
 

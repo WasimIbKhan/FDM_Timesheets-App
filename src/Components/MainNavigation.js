@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import classes from './MainNvaigation.module.css';
 
 function MainNavigation() {
   return (
-    <header>
-      <div>FDM Timesheets</div>
-      <nav>
+    <header className={classes.header}>
+      <div >FDM Timesheets</div>
+      <nav className={classes.logo}>
         <ul>
           <li>
             <Link to='/'>Schedule</Link>
