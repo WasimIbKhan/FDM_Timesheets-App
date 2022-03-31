@@ -9,7 +9,7 @@ const Navigation = props => {
       <nav className={classes.logo}>
         <ul>
           <li>
-            <Link to='schedule'>Schedule</Link>
+            <Link to='scheduleTab'>Schedule</Link>
           </li>
           <li>
             <Link to='profileTab'>Profile</Link>

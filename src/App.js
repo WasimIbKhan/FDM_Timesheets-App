@@ -13,8 +13,9 @@ import {
   useLocation,
 } from 'react-router-dom';
 import Navigation from './Components/MainNavigation'
-import Profile from './Pages/Pages/ProfileTab/Profile'
-import EditProfile from './Pages/Pages/ProfileTab/EditProfile'
+import Schedule from './Pages/ScheduleTab/Schedule';
+import Profile from './Pages/ProfileTab/Profile'
+import EditProfile from './Pages/ProfileTab/EditProfile'
 
 const fakeAuth = () =>
   new Promise((resolve) => {
@@ -115,7 +116,9 @@ function App() {
               <Dashboard />
             </ProtectedRoute>
           }>
-          <Route path="schedule" element={<Home />} />
+          <Route path="scheduleTab" element={<Outlet />} >
+            <Route path='/' element={<Schedule />} />
+          </Route>
           <Route path="profileTab" element={<Outlet />} >
             <Route path="/" element={ <Profile />} />
             <Route path="edit-profile" element={ <EditProfile />} />
