@@ -143,6 +143,7 @@ function App() {
 const Login = props => {
   const { onLogin } = useAuth();
   const location = useLocation();
+  console.log ('hello world')
   return(
       <div>
           <h1>Login</h1>
