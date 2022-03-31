@@ -13,9 +13,10 @@ import {
   useLocation,
 } from 'react-router-dom';
 import Navigation from './Components/MainNavigation'
-import Schedule from './Pages/ScheduleTab/Schedule';
+import Schedule from './Pages/ScheduleTab/Schedule'
 import Profile from './Pages/ProfileTab/Profile'
 import EditProfile from './Pages/ProfileTab/EditProfile'
+
 
 const fakeAuth = () =>
   new Promise((resolve) => {
@@ -65,7 +66,7 @@ const ProtectedRoute = ({ children }) => {
   const location = useLocation();
 
   if (!token) {
-    return <Navigate to="/login" replace state={{ from: location }} />;
+    return <Navigate to="/authentication" replace state={{ from: location }} />;
   }
 
   return children;
@@ -75,7 +76,7 @@ const ProtectedRoute = ({ children }) => {
 const BlogPosts = {
   '1': {
     name: 'Wasim',
-    description: 'Is meant to work on the Schedule Tab, hes be able to create tasks, then add them to the schedule'
+    description: 'Is meant to work on the Schedule Tab, hes completed it as now you can add any task to the schedule'
   },
   '2': {
     name: 'Amr Khalid A Bawzeer',
@@ -110,7 +111,11 @@ function App() {
       <AuthProvider>
       <Routes>
         <Route index element={<Login />} />
-        <Route path="login" element={<Login auth={useAuth()}/>} />
+        <Route path="authentication" element={<Outlet />} >
+          <Route path="/" element={<Login title="title" auth={useAuth()}/>} />
+          <Route path="signup" element={<Signup auth={useAuth()}/>} />
+        </Route>
+        
         <Route path='dashboard' element={
             <ProtectedRoute>
               <Dashboard />
@@ -123,9 +128,9 @@ function App() {
             <Route path="/" element={ <Profile />} />
             <Route path="edit-profile" element={ <EditProfile />} />
           </Route>
-          <Route path="posts" element={<Posts />}>
-            <Route path="/" element={<PostLists />} />
-            <Route path=":slug" element={<Post />} />
+          <Route path="menu-tab" element={<Outlet />}>
+            <Route path="/" element={<OrganisationMembers />} />
+            <Route path=":slug" element={<Member />} />
           </Route>
         </Route>
       </Routes>
@@ -134,32 +139,36 @@ function App() {
   );
 }
 
-const Home = () => {
-  const { onLogin } = useAuth();
-  
-  return (
-    <>
-      <h2>Home (Public)</h2>
-
-      <button type="button" onClick={onLogin}>
-        Sign In
-      </button>
-    </>
-  );
-};
 
 const Login = props => {
   const { onLogin } = useAuth();
+  const location = useLocation();
   return(
       <div>
           <h1>Login</h1>
           <button type="button" onClick={onLogin}>
-              Sign In
+              Login
           </button>
+          <Link to="signup">
+            <button type="button">
+                Sign Up
+            </button>
+          </Link>
       </div>
   )
 }
 
+const Signup = props => {
+  const { onLogin } = useAuth();
+  return(
+      <div>
+          <h1>Signup</h1>
+          <button type="button" onClick={onLogin}>
+              Signup
+          </button>
+      </div>
+  )
+}
 
 const Dashboard = () => {
   return (
@@ -169,30 +178,12 @@ const Dashboard = () => {
     </div>
   )
 }
-function About() {
-  const { token } = useAuth();
-  return (
-    <div style={{ padding: 20 }}>
-      <h2>About View</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-      <div>Authenticated as {token}</div>
-    </div>
-  );
-}
 
-function Posts() {
+function OrganisationMembers() {
   return (
     <div style={{ padding: 20 }}>
       <h2>Organisation Members</h2>
-      {/* render any matching child */}
-      <Outlet />
-    </div>
-  );
-}
-
-function PostLists() {
-  return (
-    <ul>
+      <ul>
       {Object.entries(BlogPosts).map(([slug, { name }]) => (
         <li key={slug}>
           <Link to={`${slug}`}>
@@ -200,19 +191,21 @@ function PostLists() {
           </Link>
         </li>
       ))}
-    </ul>
+      </ul>
+    </div>
+    
   );
 }
 
-function Post() {
+function Member() {
   const { slug } = useParams();
-  const post = BlogPosts[slug];
+  const member = BlogPosts[slug];
 
-  const { title, description } = post;
+  const { name, description } = member;
 
   return (
     <div style={{ padding: 20 }}>
-      <h3>{title}</h3>
+      <h3>{name}</h3>
       <p>{description}</p>
     </div>
   );

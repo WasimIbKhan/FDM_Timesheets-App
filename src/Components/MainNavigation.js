@@ -15,7 +15,7 @@ const Navigation = props => {
             <Link to='profileTab'>Profile</Link>
           </li>
           <li>
-            <Link to='posts'>Menu</Link>
+            <Link to='menu-tab'>Menu</Link>
           </li>
           <div onClick={onLogout} className={classes.logout}>
               Logout
