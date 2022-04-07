@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/********/
+
+.box {
+  margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 425px;
+	background-color: rgb(235, 235, 235);
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(rgb(117, 117, 117), .25);
+	padding: .75rem;
+  /* padding: 50%;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 20rem;
+  align-self: center; */
+}
+
+/********/
+
+.btn {
+  font: inherit;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #ffffff;
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #c7c7c7;
+  border-color: #c7c7c7;
+}
+
+/********/
+
+input[type=username] {
+  padding: 4px 10px 5px;
+  margin: 5px 10px;
+  box-sizing: border-box;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+}
+
+input[type=password] {
+  padding: 4px 10px 5px ;
+  margin: 5px 15px;
+  box-sizing: border-box;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+}
+
+input[type=username]:focus {
+  border: 3px solid rgb(150, 150, 150);
+}
+
+input[type=password]:focus {
+  border: 3px solid rgb(150, 150, 150);
+}

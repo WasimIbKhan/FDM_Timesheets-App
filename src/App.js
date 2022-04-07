@@ -16,6 +16,9 @@ import Navigation from './Components/MainNavigation'
 import Schedule from './Pages/ScheduleTab/Schedule'
 import Profile from './Pages/ProfileTab/Profile'
 import EditProfile from './Pages/ProfileTab/EditProfile'
+import { render } from '@testing-library/react';
+
+
 
 
 const fakeAuth = () =>
@@ -143,19 +146,48 @@ function App() {
 const Login = props => {
   const { onLogin } = useAuth();
   const location = useLocation();
-  console.log ('hello world')
-  return(
-      <div>
-          <h1>Login</h1>
-          <button type="button" onClick={onLogin}>
-              Login
-          </button>
-          <Link to="signup">
-            <button type="button">
-                Sign Up
+  // export default class LoginDet extends React.Component {
+  // Constructor(props); {
+  // super(props);
+  //   this.state = {
+  //     details: {
+  //       username: props.username,
+  //       pasword: props.password,
+  //     }
+  //   }
+  // }
+  // }  
+
+return(
+    <div className='box'> 
+        <h1>Login</h1>
+        <div> 
+          <form>
+            <div>
+              <label>
+                Username:
+                <input type="username" placeholder="Enter Username" name="Username" /*value={this.state.details.username}*//>
+              </label>
+            </div>
+            <div>
+              <label>
+                Password:
+                <input type="password" placeholder="Enter Password" name="Password" /*value={this.state.details.password}*/ />
+              </label>
+            </div>
+            <div>
+            <button className='btn' type="button" onClick={onLogin}>
+            Login
             </button>
-          </Link>
-      </div>
+            <Link to="signup">
+              <button className='btn' type="button">
+                  Sign Up
+              </button>
+            </Link>
+            </div>
+          </form>
+        </div>
+    </div>
   )
 }
 
