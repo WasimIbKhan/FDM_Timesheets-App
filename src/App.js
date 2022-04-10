@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import image from './image1.jpg';
 import {
   BrowserRouter as Router,
   Routes,
