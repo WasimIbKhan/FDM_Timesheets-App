@@ -221,7 +221,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="../FDM_Timesheets-App/image1.jpg"/>
+                  <img src="../FDM_Timesheets-App/src/image1.jpg"/>
                 </div>
                 <h3 className="title">Jack Williamson</h3>
                 <span className="post">FDM Business Consultant</span>
