@@ -213,7 +213,7 @@ function OrganisationMembers() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         {/*Bootstrap 4*/}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossOrigin="anonymous" />
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
         <div className="container">
           <div className="row">
@@ -232,7 +232,7 @@ function OrganisationMembers() {
                   <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
                   <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
                   <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
-                  <button type="button" class="btn btn-light"><span class="bi bi-plus"></span></button>
+                  <li><button type="button" class="btn btn-light"><span class="bi bi-plus"></span></button></li>
                 </ul>
               </div>
             </div>
