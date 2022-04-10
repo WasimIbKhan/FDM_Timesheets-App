@@ -4,7 +4,7 @@ function OrganisationMembers() {
     return(
         <div>
             <h1>Members</h1>
-            <img src={require('./image1.jpg}').default/>
+            <img src={require('./image1.jpg}').default}/>
         </div>
     )
 }
