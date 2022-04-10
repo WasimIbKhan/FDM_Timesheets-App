@@ -221,7 +221,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-            <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1210-1024x683.jpg" />
+            <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-755-1-1024x683.jpg" />
                 </div>
                 <h3 className="title">Jack Williamson</h3>
                 <span className="post">FDM Business Consultant</span>
@@ -238,7 +238,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image2.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1029-1024x683.jpg" />
                 </div>
                 <h3 className="title">Alex Damion</h3>
                 <span className="post">Team Leader</span>
@@ -255,7 +255,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image3.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-791-1-1024x683.jpg" />
                 </div>
                 <h3 className="title">Kristiana Watson</h3>
                 <span className="post"> FDM Web Designer</span>
@@ -272,7 +272,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image4.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-177-1024x683.jpg" />
                 </div>
                 <h3 className="title">Isabelle Donker</h3>
                 <span className="post">Team Leader</span>
@@ -289,7 +289,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image5.jpg" />
+                  <img src="https://blog.1portrait.ie/wp-content/uploads/2020/08/1portrait-professional-business-headshots-linkedin.jpg" />
                 </div>
                 <h3 className="title">Shaun Connor</h3>
                 <span className="post"> FDM Web Developer</span>
@@ -306,7 +306,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image6.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/Option-3-1024x683.jpg" />
                 </div>
                 <h3 className="title">Emma Dawson</h3>
                 <span className="post">FDM Business Analyst</span>
@@ -323,7 +323,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image7.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-2397-1-2-1024x683.jpg" />
                 </div>
                 <h3 className="title">Mark Pieterson</h3>
                 <span className="post">FDM Web Designer</span>
@@ -340,7 +340,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image8.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1315-1024x683.jpg" />
                 </div>
                 <h3 className="title">Sarah Thomson</h3>
                 <span className="post">FDM Accountant</span>
