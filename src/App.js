@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import { initializeApp } from "firebase/app";
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import {getFirestore, doc, setDoc } from "firebase/firestore"; 
 import {
   BrowserRouter as Router,
   Routes,
@@ -16,10 +19,6 @@ import Navigation from './Components/MainNavigation'
 import Schedule from './Pages/ScheduleTab/Schedule'
 import Profile from './Pages/ProfileTab/Profile'
 import EditProfile from './Pages/ProfileTab/EditProfile'
-import { render } from '@testing-library/react';
-
-
-
 
 const fakeAuth = () =>
   new Promise((resolve) => {
@@ -109,6 +108,18 @@ const BlogPosts = {
 
 
 function App() {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2v8gZk5ukxLAPvh-_XopGbYP4DTMkePU",
+    authDomain: "fdm-timesheet-app.firebaseapp.com",
+    projectId: "fdm-timesheet-app",
+    storageBucket: "fdm-timesheet-app.appspot.com",
+    messagingSenderId: "561581032823",
+    appId: "1:561581032823:web:2642285e26fa03c6980d72"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
   return (
     <Router>
       <AuthProvider>
@@ -145,43 +156,83 @@ function App() {
 
 const Login = props => {
   const { onLogin } = useAuth();
-  const location = useLocation();
-
-return(
-    <div className='box'>
-        <h1>Login</h1>
-        <div>
-          <form>
-            <div>
-              <label>
-                Username:
-                <input type="username" placeholder="Enter Username" name="Username" /*value={this.state.details.username}*//>
-              </label>
-            </div>
-            <div>
-              <label>
-                Password:
-                <input type="password" placeholder="Enter Password" name="Password" /*value={this.state.details.password}*/ />
-              </label>
-            </div>
-            <div>
-            <button className='btn' type="button" onClick={onLogin}>
-            Login
-            </button>
-            <Link to="signup">
-              <button className='btn' type="button">
-                  Sign Up
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const auth = getAuth();
+  const onSubmit = () => {
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(user)
+      onLogin()
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+    
+  }
+  return(
+      <div className='box'>
+          <h1>Login</h1>
+          <div>
+            <form>
+              <div>
+                <label>
+                  Username:
+                  <input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/>
+                </label>
+              </div>
+              <div>
+                <label>
+                  Password:
+                  <input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)} />
+                </label>
+              </div>
+              <div>
+              <button className='btn' type="button" onClick={onSubmit}>
+              Login
               </button>
-            </Link>
-            </div>
-          </form>
-        </div>
-    </div>
-  )
+              <Link to="signup">
+                <button className='btn' type="button">
+                    Sign Up
+                </button>
+              </Link>
+              </div>
+            </form>
+          </div>
+      </div>
+    )
 }
 
 const Signup = props => {
   const { onLogin } = useAuth();
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [password, setPassword] = useState('')
+  
+    const onSubmit = () => {
+      
+      const auth = getAuth();
+      const db = getFirestore()
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(async(userCredential) => {
+          // Signed in 
+        const firebaseUser = userCredential.user;
+        await setDoc(doc(db, "users", firebaseUser), {
+          name: name
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorMessage)
+        });
+        })
+        
+      onLogin()
+    }
   return(
     <div className="form">
     <div>
@@ -190,17 +241,16 @@ const Signup = props => {
 
         <form>
             {/* Labels and inputs for form data */}
-            <label className="label">Name</label>
-            <input className="input"
-       type="text" />
+            <label className="label" >Name</label>
+            <input className="input" type="text"  onChange={event => setName(event.target.value)} />
 
             <label className="label">Email</label>
-            <input className="input" type="email" />
+            <input className="input" type="email" onChange={event => setEmail(event.target.value)}/>
 
             <label className="label">Password</label>
-            <input className="input" type="password" />
+            <input className="input" type="password" onChange={event => setPassword(event.target.value)}/>
 
-            <button onClick={onLogin} className="btn" type="submit">
+            <button onClick={() => onSubmit()} className="btn" type="submit">
             Submit
             </button>
         </form>
