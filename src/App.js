@@ -118,7 +118,7 @@ function App() {
           <Route path="/" element={<Login title="title" auth={useAuth()}/>} />
           <Route path="signup" element={<Signup auth={useAuth()}/>} />
         </Route>
-        
+
         <Route path='dashboard' element={
             <ProtectedRoute>
               <Dashboard />
@@ -148,9 +148,9 @@ const Login = props => {
   const location = useLocation();
 
 return(
-    <div className='box'> 
+    <div className='box'>
         <h1>Login</h1>
-        <div> 
+        <div>
           <form>
             <div>
               <label>
@@ -219,19 +219,160 @@ const Dashboard = () => {
 
 function OrganisationMembers() {
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Organisation Members</h2>
-      <ul>
-      {Object.entries(BlogPosts).map(([slug, { name }]) => (
-        <li key={slug}>
-          <Link to={`${slug}`}>
-            <h3>{name}</h3>
-          </Link>
-        </li>
-      ))}
-      </ul>
-    </div>
-    
+    <div>
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css.css" />
+        {/*font-awesome */}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        {/*Bootstrap 4*/}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossOrigin="anonymous" />
+        <h2><b> Team Menu </b></h2>
+        <div className="container">
+          <div className="row">
+            {/* team section*/}
+            {/*1st member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="../FDM_Timesheets-App/image1.jpg"/>
+                </div>
+                <h3 className="title">Jack Williamson</h3>
+                <span className="post">FDM Business Consultant</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*2nd member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image2.jpg" />
+                </div>
+                <h3 className="title">Alex Damion</h3>
+                <span className="post">Team Leader</span>
+                {/*social Icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*3rd member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image3.jpg" />
+                </div>
+                <h3 className="title">Kristiana Watson</h3>
+                <span className="post"> FDM Web Designer</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*4th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image4.jpg" />
+                </div>
+                <h3 className="title">Isabelle Donker</h3>
+                <span className="post">Team Leader</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*5th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image5.jpg" />
+                </div>
+                <h3 className="title">Shaun Connor</h3>
+                <span className="post"> FDM Web Developer</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*6th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image6.jpg" />
+                </div>
+                <h3 className="title">Emma Dawson</h3>
+                <span className="post">FDM Business Analyst</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*7th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image7.jpg" />
+                </div>
+                <h3 className="title">Mark Pieterson</h3>
+                <span className="post">FDM Web Designer</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*8th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="image8.jpg" />
+                </div>
+                <h3 className="title">Sarah Thomson</h3>
+                <span className="post">FDM Accountant</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
   );
 }
 
