@@ -1,10 +1,11 @@
 import React from 'react'
+import image from './image1.jpg';
 function OrganisationMembers() {
     console.log("Hi World")
     return(
         <div>
             <h1>Members</h1>
-            <img src={require('./image1.jpg}').default} height={200} width{200}/>
+            <img src={image} className="image" alt=""/>
         </div>
     )
 }
