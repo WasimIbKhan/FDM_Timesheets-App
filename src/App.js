@@ -221,7 +221,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-            <img src="image1.jpg" />
+            <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1210-1024x683.jpg" />
                 </div>
                 <h3 className="title">Jack Williamson</h3>
                 <span className="post">FDM Business Consultant</span>
