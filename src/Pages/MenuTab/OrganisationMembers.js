@@ -1,5 +1,5 @@
 import React from 'react'
-import image from './image1.jpg';
+import image from './img/image1.jpg';
 function OrganisationMembers() {
     console.log("Hi World")
     return(
