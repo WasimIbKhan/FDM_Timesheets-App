@@ -221,7 +221,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-            
+            <img src={image} className="image" alt=""/>
                 </div>
                 <h3 className="title">Jack Williamson</h3>
                 <span className="post">FDM Business Consultant</span>
