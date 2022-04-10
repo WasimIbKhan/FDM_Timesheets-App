@@ -289,7 +289,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="https://blog.1portrait.ie/wp-content/uploads/2020/08/1portrait-professional-business-headshots-linkedin.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1663-1-1024x683.jpg" />
                 </div>
                 <h3 className="title">Shaun Connor</h3>
                 <span className="post"> FDM Web Developer</span>
