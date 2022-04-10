@@ -125,7 +125,7 @@ function App() {
             </ProtectedRoute>
           }>
           <Route path="scheduleTab" element={<Outlet />} >
-            <Route path='/' element={<Schedule />} />
+            <Route path="/" element={<Schedule />} />
           </Route>
           <Route path="profileTab" element={<Outlet />} >
             <Route path="/" element={ <Profile />} />
@@ -146,17 +146,6 @@ function App() {
 const Login = props => {
   const { onLogin } = useAuth();
   const location = useLocation();
-  // export default class LoginDet extends React.Component {
-  // Constructor(props); {
-  // super(props);
-  //   this.state = {
-  //     details: {
-  //       username: props.username,
-  //       pasword: props.password,
-  //     }
-  //   }
-  // }
-  // }  
 
 return(
     <div className='box'> 
@@ -194,12 +183,28 @@ return(
 const Signup = props => {
   const { onLogin } = useAuth();
   return(
-      <div>
-          <h1>Signup</h1>
-          <button type="button" onClick={onLogin}>
-              Signup
-          </button>
-      </div>
+    <div className="form">
+    <div>
+        <h1>User Registration</h1>
+    </div>
+
+        <form>
+            {/* Labels and inputs for form data */}
+            <label className="label">Name</label>
+            <input className="input"
+       type="text" />
+
+            <label className="label">Email</label>
+            <input className="input" type="email" />
+
+            <label className="label">Password</label>
+            <input className="input" type="password" />
+
+            <button onClick={onLogin} className="btn" type="submit">
+            Submit
+            </button>
+        </form>
+    </div>
   )
 }
 
