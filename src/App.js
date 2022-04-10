@@ -146,17 +146,6 @@ function App() {
 const Login = props => {
   const { onLogin } = useAuth();
   const location = useLocation();
-  // export default class LoginDet extends React.Component {
-  // Constructor(props); {
-  // super(props);
-  //   this.state = {
-  //     details: {
-  //       username: props.username,
-  //       pasword: props.password,
-  //     }
-  //   }
-  // }
-  // }
 
 return(
     <div className='box'>
