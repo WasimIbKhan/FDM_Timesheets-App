@@ -1,4 +1,5 @@
 import React from 'react';
+import img1 from '../image1.jpg'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -221,7 +222,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="../FDM_Timesheets-App/src/image1.jpg"/>
+                  <img src={img1}/>
                 </div>
                 <h3 className="title">Jack Williamson</h3>
                 <span className="post">FDM Business Consultant</span>
