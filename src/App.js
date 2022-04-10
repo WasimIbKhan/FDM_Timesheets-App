@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './teamcss.css';
 import {
   BrowserRouter as Router,
   Routes,
