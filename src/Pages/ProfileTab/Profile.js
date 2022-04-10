@@ -1,15 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
-import {
-    Outlet
-  } from 'react-router-dom';
+import Card from './Components/Card';
 function Profile() {
-    console.log('here!')
+  const [name,setName] = useState('Your Name');
+  const [job,setJob] = useState('Job Title');
+  const [about,setAbout] = useState('Worked Since');
     return (
-        <div style={{ padding: 20 }}>
-            <h1>This is where your going to style the profile UI</h1>
-          <Link to="edit-profile">Edit Profile</Link>
-        </div>
+      <div className='App'>
+        <Card name={name} job={job} about={about}/>
+      </div>
       );
 }
 
