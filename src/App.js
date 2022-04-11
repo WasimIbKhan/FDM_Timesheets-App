@@ -164,7 +164,6 @@ const Login = props => {
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      console.log(user)
       onLogin()
       // ...
     })
@@ -220,18 +219,17 @@ const Signup = props => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(async(userCredential) => {
           // Signed in 
-        const firebaseUser = userCredential.user;
-        await setDoc(doc(db, "users", firebaseUser), {
-          name: name
-        })
-        .catch((error) => {
+          onLogin()
+          const firebaseUser = userCredential.user;
+          await setDoc(doc(db, "users", firebaseUser), {
+            name: name
+          })
+      }).catch((error) => {
           var errorCode = error.code;
           var errorMessage = error.message;
           console.log(errorMessage)
         });
-        })
-        
-      onLogin()
+      
     }
   return(
     <div className="form">
@@ -250,9 +248,9 @@ const Signup = props => {
             <label className="label">Password</label>
             <input className="input" type="password" onChange={event => setPassword(event.target.value)}/>
 
-            <button onClick={() => onSubmit()} className="btn" type="submit">
-            Submit
-            </button>
+            <button className='btn' type="button" onClick={onSubmit}>
+              Submit
+              </button>
         </form>
     </div>
   )
