@@ -251,7 +251,8 @@
   margin-left: auto;
   padding: 15px 30px;
   border: none;
-  background-color: purple;
+  background-color: rgb(44, 146, 241); 
+  background-image: linear-gradient(rgb(44, 195, 206), rgb(14, 52, 223));
   color: white;
   border-radius: 6px;
   cursor: pointer;
