@@ -20,6 +20,7 @@ function EditProfile() {
         <h4> Team Leader </h4>
         <h4> Employed Since: </h4>
         <h4> 2018 </h4>
+        <h3> Site Location: On-Site </h3>
         <button> Edit Site Location </button>
       </div>
     </div>
