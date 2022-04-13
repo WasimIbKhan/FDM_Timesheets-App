@@ -16,7 +16,7 @@ function EditProfile() {
         </div>
       </div>
       <div className="lower-container">
-        <h3>  </h3>
+        <h4> Alex Damon </h4>
         <h4> Team Leader </h4>
         <h4> Employed Since: </h4>
         <h4> 2018 </h4>
