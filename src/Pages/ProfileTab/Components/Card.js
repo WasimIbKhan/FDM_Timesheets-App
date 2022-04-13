@@ -8,7 +8,7 @@ function Card({ name, about, job }) {
       <div className="upper-container">
         <div className="image-container">
           <img
-            src="https://www.biography.com/.image/t_share/MTY2ODIwNDI5NjA2OTU0OTg1/aristotle--getty.jpg"
+            src="image7.jpg"
             alt=" "
             height="100px"
             width="100px"
