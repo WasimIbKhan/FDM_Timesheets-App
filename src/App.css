@@ -144,6 +144,7 @@ h2 {
  body#login{
    background-color: burlywood;
    text-align: center;
+<<<<<<< HEAD
  }
  body#blog{
    background-color: burlywood;
@@ -175,6 +176,8 @@ h2 {
    background-color:black;
    } 
 =======
+=======
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
    background-color:green;
    }
 >>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
@@ -195,9 +198,15 @@ h2 {
    .btn{
    color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
    background-color: rgb(30, 98, 201);
    border-radius: 5px;
    font-size: large;
+=======
+   background-color: red;
+   border-radius: 5px;
+   font-size: larger;
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
 =======
    background-color: red;
    border-radius: 5px;
@@ -224,9 +233,13 @@ h2 {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
    /* Haotien's css for sign up page */
    .label{
 =======
+=======
+
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
    /* Haotien's css for sign up page*/
    .Signup{
       text-align: center;
