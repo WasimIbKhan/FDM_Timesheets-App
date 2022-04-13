@@ -187,6 +187,15 @@ h2 {
    margin: 2px;
 
    }
+   .btn{
+   color: white;
+   background-color: rgb(30, 98, 201);
+   border-radius: 5px;
+   font-size: large;
+   display: block;
+   padding: 5px;
+   margin: 10px auto;
+   }
 
    .messages{
    display: flex;
@@ -216,15 +225,6 @@ h2 {
       padding: 5px;
       margin: 2px;
    }
-      .btn{
-         color: white;
-         background-color: rgb(30, 98, 201);
-         border-radius: 5px;
-         font-size: large;
-         display: block;
-         padding: 5px;
-         margin: 10px auto;
-      }
   
       .messages{
       display: flex;
