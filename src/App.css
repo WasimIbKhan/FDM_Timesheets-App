@@ -124,3 +124,9 @@
    background: #17bebb;
    color: #fff;
 }
+.box{
+  height: 600px;
+  background-color: rgb(44, 146, 241); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(44, 195, 206), rgb(14, 52, 223)); 
+  box-shadow: 0 0 17px #333;
+}
