@@ -286,7 +286,11 @@ const Signup = props => {
               Submit
               </button>
         </form>
+<<<<<<< Updated upstream
     </div>
+=======
+    </div> 
+>>>>>>> Stashed changes
 
   )
 }
