@@ -3,7 +3,6 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import './App.css';
-import './Signup.css';
 import { initializeApp } from "firebase/app";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {getFirestore, doc, setDoc } from "firebase/firestore"; 
@@ -231,12 +230,62 @@ const Login = props => {
 }
 
 const Signup = props => {
-  const {onLogin} = useAuth();
+  const { onLogin } = useAuth();
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [password, setPassword] = useState('')
+  const dispatch = useDispatch()
+
+    const onSubmit = () => {
+      
+      const auth = getAuth();
+      const db = getFirestore()
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(async(userCredential) => {
+          // Signed in 
+          
+          const firebaseUser = userCredential.user;
+          await setDoc(doc(db, "users", firebaseUser.uid), {
+            name: name,
+            profileImage: '',
+            description: ''
+          }).catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage)
+          });
+          await dispatch(userAction.fecthUser(firebaseUser.uid))
+          onLogin()
+      }).catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorMessage)
+        });
+      
+    }
   return(
-    <div className='Signup'>
-      <Form />
+    <div className="form">
+    <div>
+        <h1>User Registration</h1>
     </div>
-  );
+
+        <form>
+            {/* Labels and inputs for form data */}
+            <label className="label" >Name</label>
+            <input className="input" type="text"  onChange={event => setName(event.target.value)} />
+
+            <label className="label">Email</label>
+            <input className="input" type="email" onChange={event => setEmail(event.target.value)}/>
+
+            <label className="label">Password</label>
+            <input className="input" type="password" onChange={event => setPassword(event.target.value)}/>
+
+            <button className='btn' type="button" onClick={onSubmit}>
+              Submit
+              </button>
+        </form>
+    </div>
+  )
 }
 
 const Dashboard = () => {
