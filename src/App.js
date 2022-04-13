@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { Provider, useDispatch } from "react-redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import ReduxThunk from "redux-thunk";
 import './App.css';
 import { initializeApp } from "firebase/app";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {getFirestore, doc, setDoc } from "firebase/firestore"; 
+import * as userAction from './store/action/user'
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,10 +19,17 @@ import {
   useNavigate,
   useLocation,
 } from 'react-router-dom';
+import userReducer from './store/reducer/user'
 import Navigation from './Components/MainNavigation'
 import Schedule from './Pages/ScheduleTab/Schedule'
 import Profile from './Pages/ProfileTab/Profile'
 import EditProfile from './Pages/ProfileTab/EditProfile'
+
+const rootReducer = combineReducers({
+  user: userReducer,
+});
+
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 const fakeAuth = () =>
   new Promise((resolve) => {
@@ -106,20 +117,8 @@ const BlogPosts = {
   },
 };
 
+const Navigator = () => {
 
-function App() {
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA2v8gZk5ukxLAPvh-_XopGbYP4DTMkePU",
-    authDomain: "fdm-timesheet-app.firebaseapp.com",
-    projectId: "fdm-timesheet-app",
-    storageBucket: "fdm-timesheet-app.appspot.com",
-    messagingSenderId: "561581032823",
-    appId: "1:561581032823:web:2642285e26fa03c6980d72"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
   return (
     <Router>
       <AuthProvider>
@@ -151,6 +150,27 @@ function App() {
       </AuthProvider>
     </Router>
   );
+};
+
+
+function App() {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2v8gZk5ukxLAPvh-_XopGbYP4DTMkePU",
+    authDomain: "fdm-timesheet-app.firebaseapp.com",
+    projectId: "fdm-timesheet-app",
+    storageBucket: "fdm-timesheet-app.appspot.com",
+    messagingSenderId: "561581032823",
+    appId: "1:561581032823:web:2642285e26fa03c6980d72"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  return (
+    <Provider store={store}>
+      <Navigator />
+    </Provider>
+  );
 }
 
 
@@ -158,14 +178,17 @@ const Login = props => {
   const { onLogin } = useAuth();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const dispatch = useDispatch()
   const auth = getAuth();
   const onSubmit = () => {
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+    .then(async(userCredential) => {
       // Signed in 
       const user = userCredential.user;
+      await dispatch(userAction.fecthUser(user.uid))
       onLogin()
-      // ...
+
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -219,11 +242,19 @@ const Signup = props => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(async(userCredential) => {
           // Signed in 
-          onLogin()
+          
           const firebaseUser = userCredential.user;
-          await setDoc(doc(db, "users", firebaseUser), {
-            name: name
-          })
+          await setDoc(doc(db, "users", firebaseUser.uid), {
+            name: name,
+            profileImage: '',
+            description: ''
+          }).catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage)
+          });
+          await dispatch(userAction.fecthUser(firebaseUser.uid))
+          onLogin()
       }).catch((error) => {
           var errorCode = error.code;
           var errorMessage = error.message;
