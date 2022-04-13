@@ -190,7 +190,7 @@ h2 {
    /* Haotien's css for sign up page*/
    .Signup{
       text-align: center;
-      background-color:green;
+      background-color:black;
       }
   
       .label{
@@ -208,7 +208,7 @@ h2 {
       }
       .btn{
       color: white;
-      background-color: red;
+      background-color: rgb(30, 98, 201);
       border-radius: 5px;
       font-size: larger;
       display: block;
@@ -223,7 +223,7 @@ h2 {
   
       .error{
       display: block;
-      background-color: red;
+      background-color: rgb(30, 98, 201);
       color: white;
       width: fit-content;
       height: 50px;
