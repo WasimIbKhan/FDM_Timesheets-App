@@ -12,6 +12,8 @@ const initialState = {
   export default (state = initialState, action) => {
     switch (action.type) {
       case SET_USER:
+        console.log("step 2")
+        console.log(action.userId)
         return {
           ...state,
           userId: action.userId,

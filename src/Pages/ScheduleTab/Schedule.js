@@ -3,8 +3,9 @@ import React from 'react';
 import { useSelector} from "react-redux";
 import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda} from '@syncfusion/ej2-react-schedule'
 function Schedule() {
-    const user = useSelector(state => state.user.name)
-    console.log(user)
+    const userId = useSelector(state => state.user.userId)
+    console.log("step 3")
+    console.log(userId)
     return ( 
         <div>
             <Link to='/Task'>Tasks</Link>

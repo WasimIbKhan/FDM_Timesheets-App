@@ -1,6 +1,6 @@
-import {getFirestore, doc, setDoc, collection, getDocs  } from "firebase/firestore"; 
+import {getFirestore, doc, setDoc, collection, getDocs, getDoc  } from "firebase/firestore"; 
 export const EDIT_USER = 'EDIT_USER'
-export const SET_USER = 'SET_USER'
+export const SET_USER = "SET_USER"
 export const SET_USERS = 'SET_USERS'
 
 export const fecthUsers = () => {
@@ -11,7 +11,7 @@ export const fecthUsers = () => {
     
         const loadedUsers= [];
         
-        const querySnapshot = await getDocs(collection(db, "cities"));
+        const querySnapshot = await getDocs(collection(db, "users"));
             querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             loadedUsers.push({
@@ -19,7 +19,7 @@ export const fecthUsers = () => {
                 name: doc.data().name
                 })
             
-        });
+        })
           dispatch({
             type: SET_USERS,
             users: loadedUsers
@@ -33,16 +33,22 @@ export const fecthUser = userId => {
               
         const db = getFirestore()
             
-        const docRef = await getDocs(doc(db, "users", userId))
-        console.log(docRef.data())
-          dispatch({
-            type: SET_USER,
-            userId: userId,
-            name: docRef.date().name,
-            profileImage: docRef.date().profileImage,
-            description: docRef.date().description,
-          });
-        }    
+        const docRef = await getDoc(doc(db, "users", userId))
+        
+        try {
+            dispatch({
+                type: SET_USER,
+                userId: userId,
+                name: docRef.data().name,
+                profileImage: docRef.data().profileImage,
+                description: docRef.data().description,
+              });
+            
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    }
 }
 
 export const updateUser = user => {

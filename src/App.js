@@ -128,7 +128,6 @@ const Navigator = () => {
           <Route path="/" element={<Login title="title" auth={useAuth()}/>} />
           <Route path="signup" element={<Signup auth={useAuth()}/>} />
         </Route>
-
         <Route path='dashboard' element={
             <ProtectedRoute>
               <Dashboard />
