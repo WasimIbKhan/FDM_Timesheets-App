@@ -125,20 +125,14 @@
    color: #fff;
 }
 
-.box {
-	width: 380px;
-	margin:7% auto;
-	border-radius: 25px;
-	background-color: rgba(0,0,0,0.1);
-	box-shadow: 0 0 17px #333;
-}
-
 .containerw {
-	width: 380px;
+	width: 500px;
 	margin:7% auto;
+  height: 650px;
 	border-radius: 25px;
-	background-color: rgba(0,0,0,0.1);
 	box-shadow: 0 0 17px #333;
+  background-color: rgb(44, 146, 241);
+  background-image: linear-gradient(rgb(44, 195, 206), rgb(14, 52, 223));
 }
 
 .headerw {
@@ -147,7 +141,7 @@
 }
 
 .headerw h1 {
-	color: white;
+	color: black;
 	font-size: 45px;
 	margin-bottom: 80px;
 }
@@ -173,7 +167,7 @@
 	background-color: #83acf1;
 	letter-spacing: 1px;
 	font-weight: bold;
-	margin-bottom: 70px;
+	margin-bottom: 10px;
 }
 
 .mains button:hover {
@@ -190,7 +184,7 @@
 }
 
 .mains i {
-	position: absolute;
+	position: relative;
 	left: 15px;
 	color: #333;
 	font-size: 16px;

@@ -210,11 +210,11 @@ const Login = props => {
                  <form>
                    <span>
                      <i className="fa fa-user" />
-                     <input type="text" placeholder="Username" name />
+                     <input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/>
                    </span><br />
                    <span>
                      <i className="fa fa-lock" />
-                     <input type="password" placeholder="Password" name />
+                     <input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)}/>
                    </span><br />
                    <button className='btn' type="button" onClick={onSubmit}>Login</button>
                    <Link to="signup">
@@ -265,7 +265,8 @@ const Signup = props => {
 
     }
   return(
-    <div className="form">
+
+   <div className="form">
     <div>
         <h1>User Registration</h1>
     </div>
@@ -286,6 +287,7 @@ const Signup = props => {
               </button>
         </form>
     </div>
+
   )
 }
 
