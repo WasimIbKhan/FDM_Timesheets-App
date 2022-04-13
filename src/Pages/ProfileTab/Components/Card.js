@@ -21,6 +21,7 @@ function Card({ name, about, job }) {
         <h4> Team Leader </h4>
         <h4> Employed Since: </h4>
         <h4> 2018 </h4>
+        <h4> Currently: On-Site </h4>
         <Link to="edit-profile">
           <button>Edit Profile</button>
         </Link>
