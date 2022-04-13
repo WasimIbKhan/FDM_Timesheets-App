@@ -300,7 +300,7 @@ const Dashboard = () => {
 
 function OrganisationMembers() {
   return (
-    <div>
+    <div className="html">
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -310,7 +310,8 @@ function OrganisationMembers() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         {/*Bootstrap 4*/}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossOrigin="anonymous" />
-        <h2><b> Team Menu </b></h2>
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+
         <div className="container">
           <div className="row">
             {/* team section*/}
@@ -318,7 +319,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="../FDM_Timesheets-App/image1.jpg"/>
+            <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-755-1-1024x683.jpg" />
                 </div>
                 <h3 className="title">Jack Williamson</h3>
                 <span className="post">FDM Business Consultant</span>
@@ -328,6 +329,8 @@ function OrganisationMembers() {
                   <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
                   <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
                   <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                  <li><button onclick="myFunction()" type="button" class="btn btn-light"><span class="bi bi-plus"></span></button></li>
+
                 </ul>
               </div>
             </div>
@@ -335,7 +338,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image2.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1029-1024x683.jpg" />
                 </div>
                 <h3 className="title">Alex Damion</h3>
                 <span className="post">Team Leader</span>
@@ -352,7 +355,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image3.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-791-1-1024x683.jpg" />
                 </div>
                 <h3 className="title">Kristiana Watson</h3>
                 <span className="post"> FDM Web Designer</span>
@@ -369,7 +372,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image4.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-177-1024x683.jpg" />
                 </div>
                 <h3 className="title">Isabelle Donker</h3>
                 <span className="post">Team Leader</span>
@@ -386,7 +389,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image5.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1663-1-1024x683.jpg" />
                 </div>
                 <h3 className="title">Shaun Connor</h3>
                 <span className="post"> FDM Web Developer</span>
@@ -403,7 +406,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image6.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/Option-3-1024x683.jpg" />
                 </div>
                 <h3 className="title">Emma Dawson</h3>
                 <span className="post">FDM Business Analyst</span>
@@ -420,7 +423,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image7.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-2397-1-2-1024x683.jpg" />
                 </div>
                 <h3 className="title">Mark Pieterson</h3>
                 <span className="post">FDM Web Designer</span>
@@ -437,7 +440,7 @@ function OrganisationMembers() {
             <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src="image8.jpg" />
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1315-1024x683.jpg" />
                 </div>
                 <h3 className="title">Sarah Thomson</h3>
                 <span className="post">FDM Accountant</span>
@@ -455,6 +458,9 @@ function OrganisationMembers() {
       </div>
 
   );
+}
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
 }
 
 function Member() {

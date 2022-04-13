@@ -1,9 +1,11 @@
 import React from 'react'
+import image from './img/image1.jpg';
 function OrganisationMembers() {
     console.log("Hi World")
     return(
         <div>
             <h1>Members</h1>
+            <img src={image} className="image" alt=""/>
         </div>
     )
 }

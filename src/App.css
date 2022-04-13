@@ -36,9 +36,9 @@
     transform: rotate(360deg);
   }
 }
-html{
+
+.html {
    background: #000000;
-   margin-top: 100px;
 
 }
 .container{
@@ -48,7 +48,7 @@ html{
 .our-team{
    border-radius: 15px;
    text-align: center;
-   padding: 10px 10px 20px;
+   padding: 30px 10px 20px;
    background: #fff;
    display: flex;
    justify-content: center;
@@ -123,14 +123,4 @@ html{
 .our-team:hover .social li a{
    background: #17bebb;
    color: #fff;
-}
-
-h2 {
-   font-weight: 1000;
-   font-size: 500px;
-   font-family: "Lucida Console", "Courier New", monospace;
-   width: 100%;
-   text-align: center;
-   margin-bottom:20px;
-   color:white;
 }
