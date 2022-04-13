@@ -265,30 +265,28 @@ const Signup = props => {
 
     }
   return(
-
-
-      <div className="form">
-    <div>
-        <h1>User Registration</h1>
-    </div>
-
-        <form>
-            {/* Labels and inputs for form data */}
-            <label className="label" >Name</label>
-            <input className="inputs" type="texts"  onChange={event => setName(event.target.value)} />
-
-            <label className="label">Email</label>
-            <input className="inputs" type="emails" onChange={event => setEmail(event.target.value)}/>
-
-            <label className="label">Password</label>
-            <input className="inputs" type="passwords" onChange={event => setPassword(event.target.value)}/>
-
-            <button className='btns' type="buttons" onClick={onSubmit}>
-              Submit
-              </button>
-        </form>
-    </div>
-
+    <div className="signupFrm">
+           <form action className="formx">
+             <h1 className="titlex">Sign up</h1>
+             <div className="inputContainer">
+               <input type="text" className="inputx" />
+               <label htmlFor className="label">Email</label>
+             </div>
+             <div className="inputContainer">
+               <input type="text" className="inputx" />
+               <label htmlFor className="label">Username</label>
+             </div>
+             <div className="inputContainer">
+               <input type="text" className="inputx" />
+               <label htmlFor className="label">Password</label>
+             </div>
+             <div className="inputContainer">
+               <input type="text" className="inputx" />
+               <label htmlFor className="label">Confirm Password</label>
+             </div>
+             <input type="submit" className="submitBtn" defaultValue="Sign up" />
+           </form>
+         </div>
   )
 }
 
