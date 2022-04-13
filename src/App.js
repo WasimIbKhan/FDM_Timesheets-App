@@ -265,15 +265,44 @@ const Signup = props => {
 
     }
   return(
+    <div>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+        <div className="signupFrm">
+          <form action className="form">
+            <h1 className="title">Sign up</h1>
+            <div className="inputContainer">
+              <input type="text" className="input" placeholder="a" />
+              <label htmlFor className="label">Email</label>
+            </div>
+            <div className="inputContainer">
+              <input type="text" className="input" placeholder="a" />
+              <label htmlFor className="label">Username</label>
+            </div>
+            <div className="inputContainer">
+              <input type="text" className="input" placeholder="a" />
+              <label htmlFor className="label">Password</label>
+            </div>
+            <div className="inputContainer">
+              <input type="text" className="input" placeholder="a" />
+              <label htmlFor className="label">Confirm Password</label>
+            </div>
+            <input type="submit" className="submitBtn" defaultValue="Sign up" />
+          </form>
+        </div>
+      </div>
 
-   <div className="form">
+   /*<div className="form">
     <div>
         <h1>User Registration</h1>
     </div>
 
         <form>
             {/* Labels and inputs for form data */}
-            <label className="label" >Name</label>
+            /*<label className="label" >Name</label>
             <input className="input" type="text"  onChange={event => setName(event.target.value)} />
 
             <label className="label">Email</label>
@@ -286,7 +315,7 @@ const Signup = props => {
               Submit
               </button>
         </form>
-    </div>
+    </div>*/
 
   )
 }
