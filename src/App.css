@@ -171,8 +171,13 @@ h2 {
 
  .Signup{
    text-align: center;
+<<<<<<< HEAD
    background-color:black;
    } 
+=======
+   background-color:green;
+   }
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
 
    .label{
    display: block;
@@ -189,9 +194,15 @@ h2 {
    }
    .btn{
    color: white;
+<<<<<<< HEAD
    background-color: rgb(30, 98, 201);
    border-radius: 5px;
    font-size: large;
+=======
+   background-color: red;
+   border-radius: 5px;
+   font-size: larger;
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
    display: block;
    padding: 5px;
    margin: 10px auto;
@@ -212,8 +223,18 @@ h2 {
    } 
 
 
+<<<<<<< HEAD
    /* Haotien's css for sign up page */
    .label{
+=======
+   /* Haotien's css for sign up page*/
+   .Signup{
+      text-align: center;
+      background-color:black;
+      }
+  
+      .label{
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
       display: block;
       font-size: larger;
       color: white;
@@ -224,7 +245,21 @@ h2 {
       font-size: larger;
       padding: 5px;
       margin: 2px;
+<<<<<<< HEAD
    }
+=======
+  
+      }
+      .btn{
+         color: white;
+         background-color: rgb(30, 98, 201);
+         border-radius: 5px;
+         font-size: larger;
+         display: block;
+         padding: 5px;
+         margin: 10px auto;
+      }
+>>>>>>> parent of a0de5e5 (double classes of signup and btn removed and remaining signup and button changed)
   
       .messages{
       display: flex;
