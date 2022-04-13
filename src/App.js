@@ -185,9 +185,10 @@ const Login = props => {
     signInWithEmailAndPassword(auth, email, password)
     .then(async(userCredential) => {
       // Signed in 
+      onLogin()
       const user = userCredential.user;
       await dispatch(userAction.fecthUser(user.uid))
-      onLogin()
+      
 
     })
     .catch((error) => {
@@ -235,7 +236,7 @@ const Signup = props => {
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
   const dispatch = useDispatch()
-  
+
     const onSubmit = () => {
       
       const auth = getAuth();
