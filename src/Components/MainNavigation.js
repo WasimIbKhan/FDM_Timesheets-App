@@ -12,7 +12,7 @@ const Navigation = props => {
             <Link to='scheduleTab'>Schedule</Link>
           </li>
           <li>
-            <Link to='profileTab'>Profile</Link>
+            <Link to='profiletab'>Profile</Link>
           </li>
           <li>
             <Link to='menu-tab'>Menu</Link>
