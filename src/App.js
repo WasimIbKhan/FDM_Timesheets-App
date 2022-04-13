@@ -5,7 +5,7 @@ import ReduxThunk from "redux-thunk";
 import './App.css';
 import { initializeApp } from "firebase/app";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
-import {getFirestore, doc, setDoc } from "firebase/firestore"; 
+import {getFirestore, doc, setDoc } from "firebase/firestore";
 import * as userAction from './store/action/user'
 import {
   BrowserRouter as Router,
@@ -183,49 +183,50 @@ const Login = props => {
   const onSubmit = () => {
     signInWithEmailAndPassword(auth, email, password)
     .then(async(userCredential) => {
-      // Signed in 
+      // Signed in
       onLogin()
       const user = userCredential.user;
       await dispatch(userAction.fecthUser(user.uid))
-      
+
 
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
-    
+
   }
   return(
-      <div className='box'>
-          <h1>Login</h1>
-          <div>
-            <form>
-              <div>
-                <label>
-                  Username:
-                  <input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/>
-                </label>
-              </div>
-              <div>
-                <label>
-                  Password:
-                  <input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)} />
-                </label>
-              </div>
-              <div>
-              <button className='btn' type="button" onClick={onSubmit}>
-              Login
-              </button>
-              <Link to="signup">
-                <button className='btn' type="button">
-                    Sign Up
-                </button>
-              </Link>
-              </div>
-            </form>
-          </div>
-      </div>
+
+      <div>
+             <title>login</title>
+             <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+             <link rel="stylesheet" type="text/css" href="App.css" />
+             <div className="containerw">
+               <div className="headerw">
+                 <h1>Login</h1>
+               </div>
+               <div className="mains">
+                 <form>
+                   <span>
+                     <i className="fa fa-user" />
+                     <input type="text" placeholder="Username" name />
+                   </span><br />
+                   <span>
+                     <i className="fa fa-lock" />
+                     <input type="password" placeholder="Password" name />
+                   </span><br />
+                   <button className='btn' type="button" onClick={onSubmit}>Login</button>
+                   <Link to="signup">
+                     <button className='btn' type="button">
+                         Sign Up
+                     </button>
+                   </Link>
+                 </form>
+               </div>
+             </div>
+           </div>
+
     )
 }
 
@@ -237,13 +238,13 @@ const Signup = props => {
   const dispatch = useDispatch()
 
     const onSubmit = () => {
-      
+
       const auth = getAuth();
       const db = getFirestore()
       createUserWithEmailAndPassword(auth, email, password)
         .then(async(userCredential) => {
-          // Signed in 
-          
+          // Signed in
+
           const firebaseUser = userCredential.user;
           await setDoc(doc(db, "users", firebaseUser.uid), {
             name: name,
@@ -261,7 +262,7 @@ const Signup = props => {
           var errorMessage = error.message;
           console.log(errorMessage)
         });
-      
+
     }
   return(
     <div className="form">

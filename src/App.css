@@ -132,3 +132,67 @@
 	background-color: rgba(0,0,0,0.1);
 	box-shadow: 0 0 17px #333;
 }
+
+.containerw {
+	width: 380px;
+	margin:7% auto;
+	border-radius: 25px;
+	background-color: rgba(0,0,0,0.1);
+	box-shadow: 0 0 17px #333;
+}
+
+.headerw {
+	text-align: center;
+	padding-top: 75px;
+}
+
+.headerw h1 {
+	color: white;
+	font-size: 45px;
+	margin-bottom: 80px;
+}
+
+.mains {
+	text-align: center;
+}
+
+.mains input, button {
+	width: 300px;
+	height: 40px;
+	border:none;
+	outline: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	font-size: 15px;
+	color: #333;
+	margin-bottom: 40px;
+}
+
+.mains button {
+	padding-left: 0;
+	background-color: #83acf1;
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin-bottom: 70px;
+}
+
+.mains button:hover {
+	box-shadow: 2px 2px 5px #555;
+	background-color: #7799d4;
+}
+.mains input:hover {
+	box-shadow: 2px 2px 5px #555;
+	background-color: #ddd;
+}
+
+.mains span {
+	position: relative;
+}
+
+.mains i {
+	position: absolute;
+	left: 15px;
+	color: #333;
+	font-size: 16px;
+	top: 2px;
+}
