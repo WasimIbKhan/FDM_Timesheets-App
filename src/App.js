@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+<<<<<<< Updated upstream
+=======
+import './member.js'
+>>>>>>> Stashed changes
 import {
   BrowserRouter as Router,
   Routes,
@@ -76,7 +80,11 @@ const ProtectedRoute = ({ children }) => {
 };
 
 
-const BlogPosts = {
+const BlogPosts = []
+  new Members(
+    '1091','Jack Williamson','jackWill@hello.com','FDM Business Consultant','Is meant to work on the Schedule Tab'
+
+  )
   '1': {
     name: 'Wasim',
     description: 'Is meant to work on the Schedule Tab, hes completed it as now you can add any task to the schedule'
@@ -148,6 +156,7 @@ const Login = props => {
   const location = useLocation();
 
 return(
+<<<<<<< Updated upstream
     <div className='box'>
         <h1>Login</h1>
         <div>
@@ -177,6 +186,37 @@ return(
           </form>
         </div>
     </div>
+=======
+  <div>
+        <title>login</title>
+        <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="login.css" />
+        <div className="containerw">
+          <div className="headerw">
+            <h1>Login</h1>
+          </div>
+          <div className="mains">
+            <form>
+              <span>
+                <i className="fa fa-user" />
+                <input type="text" placeholder="Username" name />
+              </span><br />
+              <span>
+                <i className="fa fa-lock" />
+                <input type="password" placeholder="Password" name />
+              </span><br />
+              <button className='btn' type="button" onClick={onLogin}>Login</button>
+              <Link to="signup">
+                <button className='btn' type="button">
+                    Sign Up
+                </button>
+              </Link>
+            </form>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> Stashed changes
   )
 }
 
