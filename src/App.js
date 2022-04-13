@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
-<<<<<<< Updated upstream
-=======
 import './member.js'
->>>>>>> Stashed changes
 import {
   BrowserRouter as Router,
   Routes,
@@ -156,34 +153,35 @@ const Login = props => {
   const location = useLocation();
 
 return(
-  <div>
-        <title>login</title>
-        <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
-        <link rel="stylesheet" type="text/css" href="App.css" />
-        <div className="containerw">
-          <div className="headerw">
-            <h1>Login</h1>
-          </div>
-          <div className="mains">
-            <form>
-              <span>
-                <i className="fa fa-user" />
-                <input type="text" placeholder="Username" name />
-              </span><br />
-              <span>
-                <i className="fa fa-lock" />
-                <input type="password" placeholder="Password" name />
-              </span><br />
-              <button className='btn' type="button" onClick={onLogin}>Login</button>
-              <Link to="signup">
-                <button className='btn' type="button">
-                    Sign Up
-                </button>
-              </Link>
-            </form>
-          </div>
+    <div className='box'>
+        <h1>Login</h1>
+        <div>
+          <form>
+            <div>
+              <label>
+                Username:
+                <input type="username" placeholder="Enter Username" name="Username" /*value={this.state.details.username}*//>
+              </label>
+            </div>
+            <div>
+              <label>
+                Password:
+                <input type="password" placeholder="Enter Password" name="Password" /*value={this.state.details.password}*/ />
+              </label>
+            </div>
+            <div>
+            <button className='btn' type="button" onClick={onLogin}>
+            Login
+            </button>
+            <Link to="signup">
+              <button className='btn' type="button">
+                  Sign Up
+              </button>
+            </Link>
+            </div>
+          </form>
         </div>
-      </div>
+    </div>
   )
 }
 
