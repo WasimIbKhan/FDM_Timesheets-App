@@ -16,7 +16,9 @@ export const fecthUsers = () => {
             // doc.data() is never undefined for query doc snapshots
             loadedUsers.push({
                 id: doc.id,
-                name: doc.data().name
+                name: doc.data().name,
+                profileImage: doc.data().profileImage,
+                description: doc.data().description,
                 })
             
         })
