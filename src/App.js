@@ -77,7 +77,7 @@ const ProtectedRoute = ({ children }) => {
 };
 
 
-const BlogPosts = []
+const BlogPosts = 
   new Members(
     '1091','Jack Williamson','jackWill@hello.com','FDM Business Consultant','Is meant to work on the Schedule Tab'
 
