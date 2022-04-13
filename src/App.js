@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Provider, useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { Provider, useDispatch } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import './App.css';
@@ -249,30 +249,6 @@ const Dashboard = () => {
 }
 
 function OrganisationMembers() {
-  const dispatch = useDispatch()
-  const users = useSelector(state => state.user.users)
-  const [loading, setIsLoading] = useState(false)
-  
-  const loadUsers = useCallback(async () => {
-    try {
-      await dispatch(userAction.fecthUsers());
-    } catch(err) {
-      console.log(err.message);
-    }
-  }, [dispatch, setIsLoading]);
-
-  useEffect(() => {
-    setIsLoading(true)
-    loadUsers().then(
-      setIsLoading(false)
-    )
-  }, [dispatch]);
-
-  if(loading) {
-    return(
-      <div>here</div>
-    )
-  }
   return (
     <div className="html">
         <meta charSet="UTF-8" />
@@ -288,14 +264,15 @@ function OrganisationMembers() {
 
         <div className="container">
           <div className="row">
-            {users.map(user => (
-              <div className="col-md-3 col-sm-6">
+            {/* team section*/}
+            {/*1st member*/}
+            <div className="col-md-3 col-sm-6">
               <div className="our-team">
                 <div className="pic">
-                  <img src={user.profileImage} />
+            <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-755-1-1024x683.jpg" />
                 </div>
-                <h3 className="title">{user.name}</h3>
-                <span className="post">{user.description}</span>
+                <h3 className="title">Jack Williamson</h3>
+                <span className="post">FDM Business Consultant</span>
                 {/*social icon*/}
                 <ul className="social">
                   <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
@@ -303,15 +280,134 @@ function OrganisationMembers() {
                   <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
                   <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
                   <li><button onclick="myFunction()" type="button" class="btn btn-light"><span class="bi bi-plus"></span></button></li>
+
                 </ul>
               </div>
             </div>
-            ))}
+            {/*2nd member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1029-1024x683.jpg" />
+                </div>
+                <h3 className="title">Alex Damion</h3>
+                <span className="post">Team Leader</span>
+                {/*social Icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*3rd member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-791-1-1024x683.jpg" />
+                </div>
+                <h3 className="title">Kristiana Watson</h3>
+                <span className="post"> FDM Web Designer</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*4th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-177-1024x683.jpg" />
+                </div>
+                <h3 className="title">Isabelle Donker</h3>
+                <span className="post">Team Leader</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*5th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1663-1-1024x683.jpg" />
+                </div>
+                <h3 className="title">Shaun Connor</h3>
+                <span className="post"> FDM Web Developer</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*6th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/Option-3-1024x683.jpg" />
+                </div>
+                <h3 className="title">Emma Dawson</h3>
+                <span className="post">FDM Business Analyst</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*7th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-2397-1-2-1024x683.jpg" />
+                </div>
+                <h3 className="title">Mark Pieterson</h3>
+                <span className="post">FDM Web Designer</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
+            {/*8th member*/}
+            <div className="col-md-3 col-sm-6">
+              <div className="our-team">
+                <div className="pic">
+                  <img src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1315-1024x683.jpg" />
+                </div>
+                <h3 className="title">Sarah Thomson</h3>
+                <span className="post">FDM Accountant</span>
+                {/*social icon*/}
+                <ul className="social">
+                  <li><a href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                  <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
+                  <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
+                  <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-  )
 
+  );
 }
 function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
