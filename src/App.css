@@ -207,13 +207,13 @@ h2 {
   
       }
       .btn{
-      color: white;
-      background-color: rgb(30, 98, 201);
-      border-radius: 5px;
-      font-size: larger;
-      display: block;
-      padding: 5px;
-      margin: 10px auto;
+         color: white;
+         background-color: rgb(30, 98, 201);
+         border-radius: 5px;
+         font-size: larger;
+         display: block;
+         padding: 5px;
+         margin: 10px auto;
       }
   
       .messages{
