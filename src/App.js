@@ -198,20 +198,24 @@ const Login = props => {
   }
   return(
       <div className='box'>
-          <h1>Login</h1>
+          <h1><center>Login</center></h1>
+          <br /><br />
           <div>
             <form>
               <div>
                 <label>
-                  Username:
-                  <input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/>
+                <center>Username</center>
+                <center><input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/></center>
                 </label>
+                <br /><br />
               </div>
               <div>
+              <br /><br />
                 <label>
-                  Password:
-                  <input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)} />
+                <center>Password</center>
+                <center><input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)} /></center>
                 </label>
+                <br /><br />
               </div>
               <div>
               <button className='btn' type="button" onClick={onSubmit}>
@@ -271,7 +275,7 @@ const Signup = props => {
 
         <form>
             {/* Labels and inputs for form data */}
-            <label className="label" >Name</label>
+            <center><label className="label" >Name</label></center>
             <input className="input" type="text"  onChange={event => setName(event.target.value)} />
 
             <label className="label">Email</label>
