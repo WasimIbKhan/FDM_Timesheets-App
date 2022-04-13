@@ -137,7 +137,7 @@ h2 {
 
 .Signup{
    text-align: center;
-   background-color:black;
+   background-color:white;
    }
 
    .label{
@@ -163,15 +163,6 @@ h2 {
    display: block;
    background-color: red;
    color: white;
-   width: fit-content;
-   height: 50px;
-   padding: 5px;
-   }
-
-   .success{
-   display: block;
-   background-color: lightblue;
-   color: black;
    width: fit-content;
    height: 50px;
    padding: 5px;
