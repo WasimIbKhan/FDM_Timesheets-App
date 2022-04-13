@@ -155,9 +155,9 @@ h2 {
    }
    .btn{
    color: white;
-   background-color: red;
+   background-color: rgb(30, 98, 201);
    border-radius: 5px;
-   font-size: larger;
+   font-size: large;
    display: block;
    padding: 5px;
    margin: 10px auto;
@@ -210,7 +210,7 @@ h2 {
          color: white;
          background-color: rgb(30, 98, 201);
          border-radius: 5px;
-         font-size: larger;
+         font-size: large;
          display: block;
          padding: 5px;
          margin: 10px auto;
