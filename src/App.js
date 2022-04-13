@@ -234,6 +234,7 @@ const Signup = props => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
+  const dispatch = useDispatch()
   
     const onSubmit = () => {
       

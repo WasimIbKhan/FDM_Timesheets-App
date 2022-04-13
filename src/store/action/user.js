@@ -1,15 +1,12 @@
-const EDIT_USER = 'EDIT_USER'
-const SET_USER = 'SET_USER'
-const SET_USERS = 'SET_USERS'
-
 import {getFirestore, doc, setDoc, collection, getDocs  } from "firebase/firestore"; 
+export const EDIT_USER = 'EDIT_USER'
+export const SET_USER = 'SET_USER'
+export const SET_USERS = 'SET_USERS'
 
 export const fecthUsers = () => {
     return async (dispatch) => {
         // any async code you want!
-        
-        const userId = getState().auth.userId;
-      
+              
         const db = getFirestore()
     
         const loadedUsers= [];
@@ -36,7 +33,7 @@ export const fecthUser = userId => {
               
         const db = getFirestore()
             
-        const docRef = await getDoc(doc(db, "users", userId))
+        const docRef = await getDocs(doc(db, "users", userId))
         console.log(docRef.data())
           dispatch({
             type: SET_USER,
@@ -69,7 +66,7 @@ export const updateUser = user => {
             userId: user.userId,
             name: user.name,
             profileImage: user.profileImage,
-            description: duser.description,
+            description: user.description,
           });
         }    
 }
