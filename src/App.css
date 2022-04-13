@@ -137,7 +137,7 @@ h2 {
 
 .Signup{
    text-align: center;
-   background-color:green;
+   background-color:black;
    }
 
    .label{
@@ -152,15 +152,6 @@ h2 {
    padding: 5px;
    margin: 2px;
 
-   }
-   .btn{
-   color: white;
-   background-color: red;
-   border-radius: 5px;
-   font-size: larger;
-   display: block;
-   padding: 5px;
-   margin: 10px auto;
    }
 
    .messages{
@@ -187,12 +178,7 @@ h2 {
    }
 
 
-   /* Haotien's css for sign up page*/
-   .Signup{
-      text-align: center;
-      background-color:black;
-      }
-  
+   /* Haotien's css for sign up page*/  
       .label{
       display: block;
       font-size: larger;
@@ -210,7 +196,7 @@ h2 {
          color: white;
          background-color: rgb(30, 98, 201);
          border-radius: 5px;
-         font-size: larger;
+         font-size: large;
          display: block;
          padding: 5px;
          margin: 10px auto;
