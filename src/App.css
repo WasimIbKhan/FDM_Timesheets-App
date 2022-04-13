@@ -103,7 +103,7 @@
 .our-team .social li a{
    border-radius: 50%;
    font-size: 15px;
-   color: #17bebb;
+   color: #18d3d0;
    border: 1px solid #17bebb;
    display: block;
    width: 30px;
@@ -124,10 +124,10 @@
    background: #17bebb;
    color: #fff;
 }
-/* .box =Login box colour */
+
 .box{
-  height: 600px;
-  background-color: rgb(44, 146, 241);
-  background-image: linear-gradient(rgb(44, 195, 206), rgb(14, 52, 223)); 
-  box-shadow: 0 0 17px #333;
+   height: 600px;
+   background-color: rgb(44, 146, 241); 
+   background-image: linear-gradient(rgb(44, 195, 206), b(14, 52, 223));
+   box-shadow: 0 0 17px #333;
 }
