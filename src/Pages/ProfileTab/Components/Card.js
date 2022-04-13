@@ -8,7 +8,7 @@ function Card({ name, about, job }) {
       <div className="upper-container">
         <div className="image-container">
           <img
-            src="image7.jpg"
+            src="https://www.corporatephotographylondon.com/wp-content/uploads/2019/11/HKstrategies-1029-1024x683.jpg"
             alt=" "
             height="100px"
             width="100px"
