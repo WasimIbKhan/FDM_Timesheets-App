@@ -3,6 +3,7 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import './App.css';
+import './Signup.css';
 import { initializeApp } from "firebase/app";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {getFirestore, doc, setDoc } from "firebase/firestore"; 
