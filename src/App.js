@@ -188,8 +188,6 @@ const Login = props => {
       onLogin()
       const user = userCredential.user;
       await dispatch(userAction.fecthUser(user.uid))
-      
-
     })
     .catch((error) => {
       const errorCode = error.code;
