@@ -275,15 +275,15 @@ const Signup = props => {
         <form>
             {/* Labels and inputs for form data */}
             <label className="label" >Name</label>
-            <input className="input" type="text"  onChange={event => setName(event.target.value)} />
+            <input className="inputs" type="texts"  onChange={event => setName(event.target.value)} />
 
             <label className="label">Email</label>
-            <input className="input" type="email" onChange={event => setEmail(event.target.value)}/>
+            <input className="inputs" type="emails" onChange={event => setEmail(event.target.value)}/>
 
             <label className="label">Password</label>
-            <input className="input" type="password" onChange={event => setPassword(event.target.value)}/>
+            <input className="inputs" type="passwords" onChange={event => setPassword(event.target.value)}/>
 
-            <button className='btn' type="button" onClick={onSubmit}>
+            <button className='btns' type="buttons" onClick={onSubmit}>
               Submit
               </button>
         </form>
