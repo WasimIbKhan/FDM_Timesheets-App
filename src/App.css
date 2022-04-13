@@ -135,10 +135,44 @@ h2 {
    color:white;
 }
 
-.Signup{
+/* Wasim's sign up */
+/* 
+.input{
+   width: 50%;
+ }
+ 
+ body#login{
+   background-color: burlywood;
+   text-align: center;
+ }
+ body#blog{
+   background-color: burlywood;
+   text-align: center;
+ }
+ body#viewBlog{
+   background-color: burlywood;
+ }
+ input#email,#password, #title, #dateAndTime {
+   outline: none;
+   display: block;
+   width: 100%;
+   margin: 0 0 20px;
+   padding: 10px 15px;
+   border: 1px solid #ccc;
+   color: #ccc;
+   font-family: "Roboto";
+   box-sizing: border-box;
+   font-size: 14px;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   transition: 0.2s linear;
+ } */
+
+
+ .Signup{
    text-align: center;
    background-color:black;
-   }
+   } 
 
    .label{
    display: block;
@@ -166,23 +200,22 @@ h2 {
    width: fit-content;
    height: 50px;
    padding: 5px;
-   }
+   } 
 
 
-   /* Haotien's css for sign up page*/  
-      .label{
+   /* Haotien's css for sign up page */
+   .label{
       display: block;
       font-size: larger;
       color: white;
       padding: 5px;
       }
   
-      .input{
+   .input{
       font-size: larger;
       padding: 5px;
       margin: 2px;
-  
-      }
+   }
       .btn{
          color: white;
          background-color: rgb(30, 98, 201);
@@ -210,8 +243,10 @@ h2 {
       .success{
       display: block;
       background-color: lightblue;
-      color: white;
+      color: black;
       width: fit-content;
       height: 50px;
       padding: 5px;
-      }
+      } 
+
+
