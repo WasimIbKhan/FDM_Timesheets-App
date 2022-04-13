@@ -231,6 +231,7 @@ h2 {
    padding: 5px;
    } 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,3 +299,13 @@ h2 {
       } 
 
 
+=======
+   .success{
+   display: block;
+   background-color: lightblue;
+   color: black;
+   width: fit-content;
+   height: 50px;
+   padding: 5px;
+   }
+>>>>>>> parent of b71254f (SIgn up CSS draft)
