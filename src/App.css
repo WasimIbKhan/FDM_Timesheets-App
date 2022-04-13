@@ -124,3 +124,11 @@
    background: #17bebb;
    color: #fff;
 }
+
+.box {
+	width: 380px;
+	margin:7% auto;
+	border-radius: 25px;
+	background-color: rgba(0,0,0,0.1);
+	box-shadow: 0 0 17px #333;
+}
