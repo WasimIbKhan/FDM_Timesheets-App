@@ -232,7 +232,8 @@ function OrganisationMembers() {
                   <li><a href="https://www.google.com" className="fa fa-twitter" /></li>
                   <li><a href="https://www.twitter.com" className="fa fa-google-plus" /></li>
                   <li><a href="https://www.linkedin.com" className="fa fa-linkedin" /></li>
-                  <li><button type="button" class="btn btn-light"><span class="bi bi-plus"></span></button></li>
+                  <li><button onclick="myFunction()" type="button" class="btn btn-light"><span class="bi bi-plus"></span></button></li>
+
                 </ul>
               </div>
             </div>
@@ -360,6 +361,9 @@ function OrganisationMembers() {
       </div>
 
   );
+}
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
 }
 
 function Member() {
