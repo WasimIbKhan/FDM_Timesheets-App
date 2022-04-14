@@ -198,35 +198,34 @@ const Login = props => {
     
   }
   return(
-      <div className='box'>
-          <h1>Login</h1>
-          <div>
-            <form>
-              <div>
-                <label>
-                  Username:
-                  <input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/>
-                </label>
-              </div>
-              <div>
-                <label>
-                  Password:
-                  <input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)} />
-                </label>
-              </div>
-              <div>
-              <button className='btn' type="button" onClick={onSubmit}>
-              Login
-              </button>
-              <Link to="signup">
-                <button className='btn' type="button">
-                    Sign Up
-                </button>
-              </Link>
-              </div>
-            </form>
-          </div>
-      </div>
+       <div>
+             <title>login</title>
+             <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+             <link rel="stylesheet" type="text/css" href="App.css" />
+             <div className="containerw">
+               <div className="headerw">
+                 <h1>Login</h1>
+               </div>
+               <div className="mains">
+                 <form>
+                   <span>
+                     <i className="fa fa-user" />
+                     <input type="username" placeholder="Enter Username" name="Username" onChange={event => setEmail(event.target.value)}/>
+                   </span><br />
+                   <span>
+                     <i className="fa fa-lock" />
+                     <input type="password" placeholder="Enter Password" name="Password" onChange={event => setPassword(event.target.value)}/>
+                   </span><br />
+                   <button className='btn' type="button" onClick={onSubmit}>Login</button>
+                   <Link to="signup">
+                     <button className='btn' type="button">
+                         Sign Up
+                     </button>
+                   </Link>
+                 </form>
+               </div>
+             </div>
+           </div>
     )
 }
 
