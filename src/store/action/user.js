@@ -1,10 +1,9 @@
 import {getFirestore, doc, setDoc, collection, getDocs, getDoc  } from "firebase/firestore"; 
+import {getStorage, ref, getDownloadURL} from 'firebase/storage';
 export const EDIT_USER = 'EDIT_USER'
 export const SET_USER = "SET_USER"
 export const SET_USERS = 'SET_USERS'
-export const SET_TASK = "SET_TASK"
 export const ADD_TASK = "ADD_TASK"
-
 export const fecthUsers = () => {
     return async (dispatch) => {
         // any async code you want!
@@ -63,7 +62,7 @@ export const updateUser = user => {
             
         await setDoc(doc(db, "users", user.userId), {
             name: user.name,
-            profileImage: user.profileImage,
+            profileImage: user,
             description: user.description
           }).catch((error) => {
             var errorCode = error.code;
@@ -79,6 +78,33 @@ export const updateUser = user => {
             description: user.description,
           });
         }    
+}
+
+const UploadImage = async(uid, uri) => {
+    const storage = getStorage(); 
+    const reference = ref(storage, uid)
+    const blob = await new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        resolve(xhr.response);
+      };
+      xhr.onerror = function (e) {
+        console.log(e);
+        reject(new TypeError('Network request failed'));
+      };
+      xhr.responseType = 'blob';
+      xhr.open('GET', uri, true);
+      xhr.send(null);
+    });
+    const snapshot = await reference.put(blob);
+    getDownloadURL(snapshot.ref).then((downloadURL) => {
+      console.log('File available at', downloadURL);
+    });
+    
+    
+    blob.close();
+    const imgUrl = await snapshot.ref.getDownloadURL();
+    return imgUrl;
 }
 
 export const addTask = task => {
