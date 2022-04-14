@@ -33,21 +33,30 @@ img {
   background: white;
   text-align: center;
   font-family: "Titillium Web", sans-serif;
+  flex-direction: column;
 }
-.lower-container h3 input,
+.lower-container input,
 h4,
 p {
   margin: 0;
   padding: 0;
 }
 
-.lower-container h3 input{
-  color: #2f2d2e;
+.input {
+  color: grey;
   font-weight: 600;
   font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+.lower-container input {
+  color: #2f2d2e;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
-.lower-container h4 input{
+.lower-container input {
   color: grey;
   font-weight: 600;
   font-size: 1.2rem;

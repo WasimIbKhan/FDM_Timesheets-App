@@ -56,7 +56,7 @@ export const fecthUser = userId => {
 export const updateUser = user => {
     return async (dispatch) => {
         // any async code you want!
-              
+        console.log(user)     
         const db = getFirestore()
             
         await setDoc(doc(db, "users", user.userId), {
