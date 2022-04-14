@@ -24,7 +24,7 @@ import Navigation from './Components/MainNavigation'
 import Schedule from './Pages/ScheduleTab/Schedule'
 import Profile from './Pages/ProfileTab/Profile'
 import EditProfile from './Pages/ProfileTab/EditProfile'
-
+import Task from './Pages/ScheduleTab/Tasks'
 const rootReducer = combineReducers({
   user: userReducer,
 });
@@ -135,6 +135,7 @@ const Navigator = () => {
           }>
           <Route path="scheduleTab" element={<Outlet />} >
             <Route path="/" element={<Schedule />} />
+            <Route path="Task" element={<Task />} />
           </Route>
           <Route path="profileTab" element={<Outlet />} >
             <Route path="/" element={ <Profile />} />

@@ -2,6 +2,8 @@ import {getFirestore, doc, setDoc, collection, getDocs, getDoc  } from "firebase
 export const EDIT_USER = 'EDIT_USER'
 export const SET_USER = "SET_USER"
 export const SET_USERS = 'SET_USERS'
+export const SET_TASK = "SET_TASK"
+export const ADD_TASK = "ADD_TASK"
 
 export const fecthUsers = () => {
     return async (dispatch) => {
@@ -77,4 +79,13 @@ export const updateUser = user => {
             description: user.description,
           });
         }    
+}
+
+export const addTask = task => {
+  return async (dispatch, getState) => {
+    dispatch({
+      type: ADD_TASK,
+      task: task
+    })
+  }
 }

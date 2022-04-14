@@ -1,10 +1,11 @@
-import {SET_USER, EDIT_USER, SET_USERS} from '../action/user'
+import {SET_USER, EDIT_USER, SET_USERS, ADD_TASK} from '../action/user'
 
 const initialState = {
     userId: null,
     name: '',
     profileImage: '',
     description: '',
+    tasks: [],
     users: []
   };
 
@@ -12,14 +13,13 @@ const initialState = {
   export default (state = initialState, action) => {
     switch (action.type) {
       case SET_USER:
-        console.log("step 2")
-        console.log(action.userId)
         return {
           ...state,
           userId: action.userId,
           name: action.name,
           profileImage: action.profileImage,
-          description: action.description
+          description: action.description,
+          tasks: state.tasks
         }
       case EDIT_USER:
         return {
@@ -27,7 +27,8 @@ const initialState = {
             userId: action.userId,
             name: action.name,
             profileImage: action.profileImage,
-            description: action.description
+            description: action.description,
+            tasks: state.tasks
           }
       case SET_USERS:
         return {
@@ -36,8 +37,22 @@ const initialState = {
           userId: state.userId,
           name: state.name,
           profileImage: state.profileImage,
-          description: state.description
+          description: state.description,
+          tasks: state.tasks
         }
+        case ADD_TASK:
+          const tasks = [...state.tasks]
+          const updatedTasks = tasks.push(action.task)
+          return{
+            ...state,
+          users: state.users,
+          userId: state.userId,
+          name: state.name,
+          profileImage: state.profileImage,
+          description: state.description,
+          tasks: updatedTasks
+          }
     }
+    
     return state;
   };
