@@ -156,12 +156,12 @@ const Navigator = () => {
 function App() {
 
   const firebaseConfig = {
-    apiKey: "AIzaSyA2v8gZk5ukxLAPvh-_XopGbYP4DTMkePU",
-    authDomain: "fdm-timesheet-app.firebaseapp.com",
-    projectId: "fdm-timesheet-app",
-    storageBucket: "fdm-timesheet-app.appspot.com",
-    messagingSenderId: "561581032823",
-    appId: "1:561581032823:web:2642285e26fa03c6980d72"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
   };
 
   // Initialize Firebase
